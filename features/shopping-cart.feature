@@ -23,3 +23,9 @@ When Eu clico em “Limpar Carrinho" na tela
 And Eu vejo uma mensagem de confirmação para a limpeza do carrinho
 And Eu clico em "Confirmar"
 Then os itens "Whopper", "Batata" e "Coca" são removidos do carrinho
+
+Scenario: Fazer pedido
+Given Eu estou na tela "Carrinho" como cliente
+And Tenho os itens "Whopper" ,"Batata" e "Coca" 
+When Eu clico em "Fazer pedido" 
+Then Navego para a tela "Pagamento" 
